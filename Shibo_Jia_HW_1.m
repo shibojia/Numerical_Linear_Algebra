@@ -29,13 +29,25 @@ clear
 % 
 
 %% Circulant Hankel
-top = input('Enter the top row for CH: ');
-flip(toeplitz([top(1) fliplr(top(2:end))], top))
+%top = input('Enter the top row for CH: ');
+%flip(toeplitz([top(1) fliplr(top(2:end))], top))
 
 %% Circulant Toeplitz 
 % top = input('Enter the top row for CT: ');
 % toeplitz([top(1) fliplr(top(2:end))], top)
 
+
+
+
+%Exercise 2.2
+function L = InvertL(L)
+n = length(L);
+for j=1:n
+    Vect = zeros(1,n);
+    Vect(1,j) = 1/L(j,j);
+    L(j,:) = Vect - Vect(1,j)*L(j,1:j-1)*L(1:j-1,:);
+end
+end
 
 
 
