@@ -3,7 +3,7 @@ clc
 clear
 close all
 
-%%Exercise_1.1
+%% Exercise_1.1
 % A = [1 2 ; 3 4 ; 5 6];
 % B = [6 5 4 ; 3 2 1];
 % 
@@ -11,9 +11,9 @@ close all
 % C = mtimes(A,B);
 % end
 
-%%Exercise_1.2
+%% Exercise_1.2
 
-% Build an nxn Hankel matrix
+%% Build an nxn Hankel matrix
 % top = input('Enter the top row = ');
 % right = input('Enter the right col = ');
 % function R= hankel( top , right )
@@ -23,7 +23,7 @@ close all
 %    end
 % end
 
-%%Build an nxn Toeplitz matrix
+%% Build an nxn Toeplitz matrix
 % top = input('Enter the top row = ');
 % left = input('Enter the left col = ');
 % toeplitz(top,left);
@@ -40,8 +40,8 @@ close all
 
 
 
-%%Exercise 2.2
-%%InvertL
+%% Exercise 2.2
+%% InvertL
 %function L = InvertL(L)
 %n = length(L);
 %   for j = 1:n
@@ -52,7 +52,7 @@ close all
 %end
 
 
-%%GuassLU
+%% GuassLU
 %function B = GaussLU(Amod,B,n)
 %   for j = 2:n
 %       B(j,:) = B(j,:) + Amod(j,1:j-1) * B (1:j-1,:);
