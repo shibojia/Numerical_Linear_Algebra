@@ -39,15 +39,27 @@ clear
 
 
 
-%Exercise 2.2
-function L = InvertL(L)
-n = length(L);
-for j=1:n
-    Vect = zeros(1,n);
-    Vect(1,j) = 1/L(j,j);
-    L(j,:) = Vect - Vect(1,j)*L(j,1:j-1)*L(1:j-1,:);
-end
-end
+%%Exercise 2.2
+%%InvertL
+%function L = InvertL(L)
+%n = length(L);
+%for j = 1:n
+%    Vect = zeros(1,n);
+%    Vect(1,j) = 1/L(j,j);
+%    L(j,:) = Vect - Vect(1,j)*L(j,1:j-1)*L(1:j-1,:);
+%end
+%end
+
+
+%%GuassLU
+%function B = GaussLU(Amod,B,n)
+%for j = 2:n
+    B(j,:) = B(j,:) + Amod(j,1:j-1) * B (1:j-1,:);
+%end
+%for i = n:-1:1
+    B (i,:) = (B(i,:) - Amod (i,i+1:n) * B (i+1:n,:)) / Amod(i,i);
+%end
+%end
 
 
 
